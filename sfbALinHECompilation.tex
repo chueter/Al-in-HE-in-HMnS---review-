@@ -1,0 +1,509 @@
+\documentclass[11pt,floatfix,showpacs]{amsart}
+\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+%\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{color}
+\usepackage{epsfig}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{lscape}
+%%%%%%%%%%%% user defined commands
+\newcommand{\se}{\section}
+\newcommand{\sse}{\subsection}
+\newcommand{\ssse}{\subsubsection}
+\newcommand{\pr}{\partial}
+\newcommand{\fr}[2]{{\frac{#1}{#2}}}
+\newcommand{\beq}{\begin{eqnarray*}}
+\newcommand{\eeq}{\end{eqnarray*}}
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\nn}{\nonumber}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\title{Basis for Discussion on: Influence of Aluminium on Hydrogen embrittlement in (high) Manganese steels}
+
+%\maketitle 
+ 
+\se{topics agreed to focus on for reviewing}
+For the influence of short range order (SRO) on stacking fault energy (SFE): see \cite{ding2018tunable} about tuning the SFE via controlling SRO in high entropy alloys (HEAs).
+SRO studies in \cite{von2011carbon}.
+Comparison of SRO ab initio calculations with stress strain curve that shows increased strain hardening in \cite{song2018mn}.
+ 
+ 
+\se{Matrix of the relevant quantities (those which make parametric connections between different scales in HE with Al models) and resulting mechanism aspects} 
+
+Definitions: $\vec{P} = (x_C,x_{Al},x_H,\epsilon_{ik},\sigma_{ik},T)$ is the vector of Parameters which probably set the relevant dependencies (carbon, aluminium,hydrogen concentration, strain tensor, stress tensor, temperature). Assume that all calculations would be required for fcc or bcc FeMn systems.   
+
+Thus, writing e.g. SFE($\vec{P}$) means the function or dataset which describes the dependencies of stacking fault energies 
+in FeMn on carbon, hydrogen and aluminium concentration, strain and stress state and temperature. 
+
+%\vspace{2cm}
+
+
+\begin{landscape}
+\renewcommand{\arraystretch}{2}
+
+%\begin{center}
+  %\begin{tabular}{ || l || l || l || l || l || l || l ||}
+  \begin{tabular}{ ||p{5 cm}|  p{3.3 cm}| p{3 cm}| p{2.5 cm} | p{2.5 cm} | p{3.0 cm} || } %l| p{2 cm} l| |p{1 cm} |l p{2 cm}  }
+    \hline
+    Parameter / HE Aspect &  Solution/Segregation energies: Al,C,H at defects vs $\vec{P}$ & Defect Formation energies vs $\vec{P} $(including SFE)  & Transition point energies (C,H) vs $\vec{P}$ & Defect mobilities vs ($\vec{P}$) & Elastic/Plastic coefficients vs ($\vec{P}$) \\ \hline
+    increased H solulibility \& decreased diffusivity & \cite{song2014interaction,han2015effect,huter2016effects}, {\color{green}Eunan's work: inconclusive effect} {\color{green}\cite{ismer2010ab}}, GBs as traps or pipe diffusion? &  & \cite{huter2016effects} &  \\ \hline
+    partial compensation of reduction of shear modulus by H $\to$ suppression of local plasticity   & \cite{han2014hydrogen} &  &  & \cite{han2014hydrogen} & \cite{han2014hydrogen}   \\ \hline 
+    reduced residual stresses, ’strong’ texture formation that might
+inhibit crack propagation   &  &  &   &  & \cite{chun2012delayed} \\ \hline
+    Al2O3 surface interlayer formation which inhibits hydrogen
+uptake &  & \cite{park2012mechanism} &   &   & \\ \hline
+   reduction of alpha’ - martensitic transformation &  & \cite{kim2008effects,chen1993effect} &   &   & \\ \hline
+    reduced deformation twinning (exp) &  & \cite{park2010stacking,jin2012effects}  &   &   & \\ \hline
+    reduced strain aging (exp) &  & \cite{koyama2013effects,lee2011origin,shun1992study} &   &   & \\ \hline
+   increase SFE reduces epsilon - martensitic transformation
+(exp) &  &  \cite{kim2008effects} &   &   & \\ \hline
+    
+
+    
+  \end{tabular}
+%\end{center} 
+\end{landscape}
+
+
+
+\begin{landscape}
+\renewcommand{\arraystretch}{2}
+
+%\begin{center}
+  %\begin{tabular}{ || l || l || l || l || l || l || l ||}
+  \begin{tabular}{ ||p{5 cm}|  p{3 cm}| p{3 cm}| p{2.5 cm} | p{2.5 cm} | p{3.0 cm} || }  %l| p{2 cm} l| |p{1 cm} |l p{2 cm}  }
+    \hline
+    Parameter / HE Aspect &  Segregation energies: Al,C,H at defects vs $\vec{P}$ & Defect Formation energies vs $\vec{P}$  (including SFE) & Transition point energies (C,H) vs $\vec{P}$ & Defect mobilities vs ($\vec{P}$) & Elastic/Plastic coefficients vs ($\vec{P}$) \\ \hline
+    kappa carbide formation, acts as H trap with increasing Mn
+content and decreasing C-content (sim) & \cite{mceniry2018ab,timmerscheidt2017role} & &  & & \\ \hline 
+    reduction of critical stress for twinning by short - range -
+ordering induced Fisher interaction compensates partially increased SFE induced
+increase of critical twinning stress (exp)  & & \cite{park2010stacking} {\color{green}\cite{sevsek2018ab}} & &  &   \\ \hline 
+    reduced diffusivity and activity of carbon leads to reduced
+cementite precipitation $\to$ suppression of local plasticity   &  &  &  \cite{koyama2013effects} &  \\ \hline 
+    increased twinning with increasing Al vs decreased twinning with Al: dependence
+on hydrogen charging, conditions   &  &  \cite{song2016effect} &   &    & \\ \hline   
+increased cross slip or reduced planar slip: reduced localized plasticity  &  & {\color{green}\cite{hickel2014impact}}  & \cite{han2014hydrogen,dieudonne2014role}  &    & \\ \hline   
+Al suppression of cosegregation induced decohesion of GBs and phase boundaries  &  & \cite{mceniry2018ab}, {\color{green}\cite{tahir2014hydrogen,wang2016first}} &  &    & \\ \hline 
+
+  \end{tabular}
+%\end{center} 
+\end{landscape}
+
+
+ 
+ 
+\se{Summary of results from papers with DIRECT relation to HE in Al alloyed steels (DIRECT means that in exp. papers, a high Mn steel with Al was considered, in sim. papers at least Fe, Mn and Al had to be considered (not necessarily C))}
+
+This section contains a list of effects which Al is claimed to have in TWIP steels which are subjected to hydrogen embrittlement 
+environmental conditions, as published in various publications listed in 'literature survey'. The second list includes open questions concerning these hypothesized effects.\\
+
+
+The effects of Al alloying on HE as claimed by publications include:
+\begin{itemize}
+\item HMnS TWIP: Al $\to$ reduction of H diffision coefficient by 35 percent (exp)
+\item HMnS TWIP: Al $\to$ increase of H solulibility by 10 percent (exp)
+\item HMnS TWIP: Al $\to$ suppression of local plasticity by decreasing the dislocation mobility as decrease of shear modulus by H is reduced (exp) (though in general, Al does not increase shear modulus of TWIP steel, see e.g. ActaMat2017 DeCooman etal.)
+\item HMnS TWIP: Al $\to$ reduced residual stresses, 'strong' texture formation that might inhibit crack propagation (exp)
+\item HMnS TWIP: Al $\to$ Al2O3 surface interlayer formation which inhibits hydrogen uptake (exp)
+\item HMnS TWIP: Al $\to$ reduction of alpha' - martensitic transformation (exp)
+\item HMnS TWIP: Al $\to$ reduced deformation twinning (exp)
+\item HMnS TWIP: Al $\to$ reduced strain aging (exp)
+\item HMnS TWIP: Al $\to$ increase SFE reduces epsilon - martensitic transformation (exp)
+\item HMnS TWIP: Al $\to$ increase SFE : cross slip occurs more easily, which inhibits dislocation pile-ups and associated localized dislocation transport of hydrogen (exp) (in general, lower sfe allows larger partial seperation and inhibits cross slip)
+\item HMnS TWIP: Al $\to$ kappa carbide formation, acts as H trap with increasing Mn content and decreasing C-content (sim) (only relevant for high Al concentrations)
+\item FeMn fcc: Al $\to$ reduction of diffusivity, increased solulibility (sim)
+\item HMnS TWIP: Al $\to$ reduction of critical stress for twinning by short - range -ordering induced Fisher interaction compensates partially increased SFE induced increase of critical twinning stress (exp)
+\item HMnS TWIP: Al $\to$ reduced diffusivity and activity of carbon leads to reduced cementite precipitation (though cementite is rarely mentioned in the context of HE in TWIP)
+\item NEGATIVE EFFECT: when changing from high strain to low strain, crack initiation sites change from grain boundaries to nonmetallic inclusions, inclusions under Al alloying often contain Al2O3 which leads to loss of matrix-inclusion connection; therefore Al alloying of TWIP steel under low strains shows detrimental influence on HE-related crack embrittlement
+\end{itemize}
+Open points and questions here:\\
+\begin{itemize}
+\item Xiaofei, is the Aluminium oxide layer removed before hydrogen charging?
+\item Al segregation to GBs
+\item increased twinning with increasing Al vs decreased twinning with Al: dependence on hydrogen charging, conditions 
+\item discussion of brittle vs ductile fracture sources: gb characteristics required for brittle intergranular fracture, while bulk of current research on exp. side dedicated to ductile fracture
+\item 
+\end{itemize}
+
+\se{Summary of results from papers with REFERENCE relation to HE in Al alloyed steels (REFERENCE means that the corresponding publications document investigations on system which do not include Al, but consider aspects which can be expected to play a role in HE in TWIP steels. This includes bcc systems to discuss medium manganese steels.)}
+
+This section contains a list of effects which claim to be possibly important for HE in steels, as published in various publications listed in 'literature survey'. The second list includes open questions concerning these hypothesized effects.
+
+\begin{itemize}
+\item fcc Fe-Mn-C: inconclusive change of bulk diffusion by manganese alloying, if positive, than less than one order of magnitude, depending on magnetic oredring can also be negative effect (sim)
+\item Fe fcc vacancy in a Fe matrix is a highly effective and capacious trap being able to accommodate up to 6 H atoms (sim)
+\item Fe bcc and fcc, grain boundaries do not provide fast diffusion channels for hydrogen, but act as hydrogen traps (sim) (while for fcc, this is not yet conclusive and pipe diffusion might play a role)
+\item Fe bcc and fcc, Hydrogen that is accumulated within the grain boundaries can lead to a lowering of the critical strain required to fracture the material (sim)
+\item Fe bcc, weakly trapped H at the interface plane of the bulk-like Sigma3 boundary acts as a “glue” for the boundary, increasing both the energetic barrier and elongation to rupture (sim)
+\item Fe bcc: mixed carbon-hydrogen population of attractive GB sites energetically preferrable over pure carbon population $\to$ embrittlement by reduction of carbon content, reduces fracture strength (sim)
+\item Fe bcc: cohesion of the GB will be significantly weakened when it is in the activated state of a GB-dislocation reaction subjected to hydrogen loading (sim)
+\item Fe fcc: Hydrogen reduces SFE and increases dislocation mobility especially at stress concentrations where hydrogen accumulates (sim)
+\item austenitic steel: hydrogen reduces dislocation repulsion (exp) (but contradictory to simulation results)
+\item Fe bcc: hydrogen- enhanced localized plasticity effects on slip transfer across grain boundaries establishes the conditions for grain boundary failure by decohesion $\to$ increased disorder, hydrogen enrichment, local stresses (sim in comparison to exp)
+\item bcc Fe: detrimental influence of rocksalt structure carbide precipitates at interfaces (sim) (probably of very limited practical importance for TWIP)
+\end{itemize}
+
+
+
+ 
+\se{Literature survey}
+\sse{Work with direct connection to Al in systems representative / relevant for manganese steels}
+
+\begin{itemize}
+\item Scripta Materialia 99 (2015) 45-48\\
+        Effect of aluminium on hydrogen permeation of high-manganese twinning-induced plasticity steel (exp paper)\\
+D.K. Han,a S.K. Lee,b S.J. Noh,b S.-K. Kimc and D.-W. Suha\\
+Info:\\
+indicating a decrease of diffusivity by 35\% with aluminium addition.
+The change in H solubility  in TWIP steels at ambient temperature for Al shows weak effect (10 percent).
+
+
+\item Hydrogen and aluminium in high-manganese twinning-induced plasticity steel (exp paper)\\
+Scripta Materialia 
+Volume 80, June 2014, Pages 9-12\\
+Bhadeshia et al.\\
+info:\\
+the decrease in shear modulus will initiate dislocation gliding at a lower resolved shear stress on a primary slip plane, which is consistent with the hydrogen-enhanced local plasticity (HELP) mechanism often used to interpret hydrogen embrittlement. In that respect, the smaller reduction in the first pop-in load in 1.5 percent Al compared to no Al in the presence of hydrogen is informative, given the greater hydrogen content recorded for the alloy. It might be concluded from this that aluminium negates some of the effect of hydrogen in leading to a reduction in the shear modulus, or in enhancing dislocation mobility in the context of the HELP mechanism. The generation and propagation of cracks during fracture require dislocation glide on the slip plane around the crack-tip; therefore, the suppression of local plasticity by decreasing the dislocation mobility with the addition of aluminium is thought to contribute to the prevention of delayed fracture in high Mn TWIP steels.
+
+
+\item Scripta Materialia 66 (2012) 960–965\\
+Delayed static failure of twinning-induced plasticity steels\\
+Young Soo Chun,a Kyung-Tae Parkb and Chong Soo Leea\\
+Info (exp. paper):\\
+delayed static failure of high-Mn TWIP steels was investigated in association with HE. For the same degree of deformation, Al-added steels showed much higher HE resistance, which was mainly due to the presence of fewer diffusible hydrogen-trapping sites than exist in the 0 Al steel. With the increase in Al con- tent, the residual stress became small, and strong h111i and h100i textures were developed, which might de- crease the driving force for diffusion of hydrogen and ar- rest the crack at specific grain boundaries, leading to the enhancement of HE resistance.
+
+\item Overview of hydrogen embrittlement in high-Mn steels\\
+international journal of hydrogen energy 42 (2017) 12706-12723\\
+Motomichi Koyama, Eiji Akiyama, Young-Kook Lee, Dierk Raabe, Kaneaki Tsuzaki\\
+Info:\\
+the Al addition not only suppresses hydrogen uptake, but also decreases its embrit- tlement sensitivity to diffusible hydrogen content as shown in Fig. 12b [32] (experimental paper). A quantitative relationship between the diffusible hydrogen content and fracture stress in a specific experi- mental condition in Fe-18Mn-xAl TWIP steels has been described as follows.
+\[
+\sigma_f = 2000[H]_D ^{-0.132 exp(-\fr{[Al]}{1.125})}
+\]
+where [H]D and [Al] are in wt.ppm and wt.\%, respectively. .
+One aspect to consider is that the solubility of hydrogen has been reported to increase with the solute Al content [107(Bhadeshia 2014 scripta mat),108(experimental paper)].
+hydrogen uptake has been associated with the prevention of hydrogen entry from a specimen surface into the bulk [109 (experimental paper)] 
+Al2O3 surface interlayer\\
+In terms of the embrittlement sensitivity to diffusible hydrogen shown in Eq. (2), Al plays also multiple roles in the suppression of hydrogen embrittlement. As mentioned above, martensitic transformation, deformation twinning, and strain aging all assist in the occurrence of hydrogen-assisted cracking. Al, when alloyed in sufficient quantity, suppresses the alpha'-martensitic transformation [46,110 (experimental paper)]. An increase in the stacking fault energy caused by the Al addition suppresses epsilon-martensitic transformation [46] and deformation twinning [111 (experimental paper),112 (experimental paper)] as well. In addition, the increase in the stacking fault energy and an increase in the activation energy for carbon diffusion strongly prevent the occurrence of strain aging [96,100,113 (all 3 experimental papers)]. An additional effect of the increase in the stack- ing fault energy is that cross slip occurs more easily, which inhibits dislocation pile-ups and associated localized dislo- cation transport of hydrogen. Furthermore, Al addition tends to reduce the effect of hydrogen-enhanced elastic/plastic deformability [114((experimental paper)]. Hence, the Al addition counteracts most of the above discussed negative microstructural factors simultaneously, which drastically decreases the hydrogen embrittlement susceptibility of high-Mn steels.
+
+
+
+\item The Role of $\kappa$ Carbides as Hydrogen Traps in High-Mn Steels,
+Metals 7(7), 264,  (2017)
+TA.Timmerscheidt, P. Dey, D. Bogdanovski, J. von Appen, T. Hickel, J. Neugebauer, R. Dronskowski\\
+ Materials: Fe-Mn-Al-C alloys\\
+Parameters: Hydrogen solution enthalpy in bulk kappa carbide and in 	kappa-gamma interface, H–H/C–H chemical interactions, embrittlement 	term which is a measure of hydrogen induced embrittlement.\\
+
+Info: Efficient strategies to control diffusive hydrogen in Al containing high-Mn steel include employing appropriate experimental conditions to ensure nano sized grain interior kappa carbides as these fine precipitates are xperimentally observed to have C vacancies which act as effective 	traps for hydrogen. Furthermore, the Mn content should be raised as its 	content determines the overall trapping ef-ficiency of the carbide.
+
+Further Info: DFT-based ab initio calculations were performed to ascertain local atomic ordering effects in the Fe-Mn-H system. Using a Fe16Mn16H supercell, the single H atom was placed in the central void of a coordinating metal octahedron composed of Fe or Mn atoms. The amount of immediate Fe and Mn neighbors was thus varied from 6 to 0 and vice versa, respectively. The H solution enthalpies, Vo-ronoi volumes and bonds strengths (using the COHP approach) were evaluated.It was found that H prefers an Mn-rich environment by up to approx. 160 meV. The decrease in solution enthalpy is due to a lattice relaxation effect resulting from larg-er exclusive (Voronoi) volumes for the ions on one hand, and due to magnetic ef-fects on the other hand. It was established via COHP analysis that H incorporation destabilizes the metal-metal bonds in the surrounding octahedron, but the effect is least pronounced for Mn-Mn bonds located in the same layer as H. This explained the energetic difference in the different stereochemical arrangements.
+\item Effects of Aluminum on Hydrogen Solubility and Diffusion in
+Deformed Fe-Mn Alloys
+Advances in Materials Science and Engineering
+Volume 2016, Article ID 4287186, 9 pages
+C. H\"uter, S. Dang, X. Zhang, A. Glensk, and R. Spatschek\\
+Materials: FeMn+Al\\
+Parameters: Solution enthalpies of H in bulk\\
+
+Info: In general, the influence of volumetric changes during isotropic deformations has larger influence on the diffusivity of hydrogen compared to volume preserving tetragonal strains.While the volumetric deformation typically results in a linear dependence of the solution energy on the volume, the influence of tetragonal strains yields effects of second order.
+This is in agreement with the notion that hydrogen leads to an isotropic expansion of the host alloy. On the other hand, at larger Al concentrations an effective blocking of paths for the hydrogen diffusion could lead to a drastic reduction of the diffusivity, caused by the high barrier of the transition
+path between octahedral and tetrahedral sites in the direct vicinity of aluminum atoms.
+\item Interaction of aluminium with hydrogen in twinning-induced
+plasticity steel
+Scripta Materialia 87 (2014) 9–12
+Eun Ju Song,a H.K.D.H. Bhadeshiaa,b and Dong-Woo Su
+
+FeMn+Al 
+
+hydrogen solution and binding energies for Oriani's theory
+cf experimental and herein predicted hydrogen thermal desorption rate of Al containing austenite
+info:
+To summarize, it is found that Al atoms in TWIP steel cause a localized dilation that better accommodates hydrogen, a phenomenon expressed via an Al–H binding
+energy. This binding energy when implemented in trapping theory indicates both that the presence of Al allows the TWIP steel to absorb more hydrogen than a corresponding steel that is Al-free, and that the diffusion coefficient for hydrogen is significantly affected by the presence of Al.
+
+\item Advances in Materials Science and Engineering Volume 2013, Article ID 382060, Al and Si Influences on Hydrogen Embrittlement of Carbide-Free Bainitic Steel
+Yanguo Li, Cheng Chen, and Fucheng Zhang\\
+Ma6terial: bcc Fe + X(X=Si-Al)\\
+Info: The binding energy of the cell with Si is the highest, and it is severely reduced by the addition of hydro- gen, which demonstrates that HE increases with the increase strength; HE can be reduced by the partial replacement of Si by Al. Hydrogen atoms energetically prefer to diffuse bet- ween the nearest neighbouring sites. The diffusion barrier of hydrogen in the cell containing Al is the highest and it is difficult for hydrogen to diffuse, which is another reason that HE can be reduced by the replacement of Si by Al
+
+\item 
+Volume 527, Issues 16–17, 25 June 2010, Pages 3651-3661 (exp paper)\\
+Materials Science and Engineering: A\\
+Stacking fault energy and plastic deformation of fully austenitic high manganese steels: Effect of Al addition\\
+info:\\
+Regardless of the SFE and/or the Al content, deformation was achieved by planar glide of dislocations before mechanical twinning occurred. Planar glide became more evident with increasing the SFE by suppressing or delaying mechanical twinning. The planar glide mode of deformation is likely to be attributed to the glide softening phenomenon associated with short range ordering in the solid solution state.\\
+
+Deformed microstructures by planar glide are manifested sequentially by dislocation arrays of equal spacing in the limited slip planes, the Taylor lattice formation, appearance of single-walled Taylor lattice domain boundaries and double-walled microbands, and finally their intersections.\\
+
+
+The critical stress for mechanical twinning becomes higher with increasing the SFE. However, in the present steels, mechanical twinning occurred at the stresses lower than those predicted by the previous model which considers the force equilibrium on the partial dislocations. An analysis revealed that, of the various dislocation–defect interactions in the solid solution alloys, the Fisher interaction tied to short range ordering is at least qualitatively shown to lower the critical stress for mechanical twinning.
+
+\item Effects of Al on microstructure and tensile properties of C-bearing high Mn TWIP steel (exp paper)
+\\ Acta Materialia
+Volume 60, Issue 4, February 2012, Pages 1680-1688\\
+info:\\
+Al addition increased the strain-rate sensitivity, resulting in improved epu (yield stress post-uniform elongation)because of reduced DSA by decreases in both activity and diffusivity of C in austenite.
+The addition of Al to C-bearing high Mn TWIP steel suppressed cementite precipitation because of reductions in both activity and diffusivity of C in austenite.The SFE of the Fe-18Mn-0.6C-(0-2)Al TWIP steels increased linearly with a constant slope of 7.8 mJ m-2 per 1 wt.\% Al. The increased SFE decelerated primary and secondary mechanical twinning.
+
+\end{itemize}
+
+
+
+\se{Work which is relevant as reference for the influence of Al in systems representative / rlevenat for manganese steels}
+
+\begin{itemize}
+\item 1.	Ab initio study of the solubility and kinetics of hydrogen in austenitic high Mn steels
+Phys. Rev. B 81, 094111 (2010).
+L. Ismer, T. Hickel and J. Neugebauer\\
+Materials: FeMnC+H\\
+Parameters: solution energies of H in FeMn(C) \& barriers vs lattice constant, diffusion coefficients\\
+Info: Our results show that Mn increases both the solubility and the mobility of H.
+\item 4.	First-principles study of the thermodynamics of hydrogen-vacancy interaction in fcc iron, 
+Phys. Rev. B 82, 224104 (2010)
+R Nazarov, T Hickel, J Neugebauer\\
+Materials: fcc Fe \\
+Parameters: PES of H in vacancy-H complexes, solution energies for interstitial sites, vacancy formation energies\\
+Info: a single vacancy in a fcc Fe matrix is a highly effective and capacious trap being able to accommodate up to 6 H atoms  presence of H can enhance the vacancy concentration by more than seven orders of magnitude resulting in superabundant vacancies
+
+\item 	First-principles study on the interaction of H interstitials with grain boundaries in $\alpha$- and $\gamma$ -Fe, 
+Phys. Rev. B 84, 144121 (2011).
+Y.A. Du, L. Ismer, J. Rogal, T. Hickel, J. Neugebauer, and R. Drautz\\
+Materials: ferritic \& austenitic Fe\\
+Parameters: solution energies of H in GBs dep. on spatial dist. to GB plane, critical Griffith stress\\
+Info: Our results show that Mn increases both the solubility and the mobility of H. the grain boundaries do not provide fast diffusion channels for hydrogen, but act as hydrogen traps. Hydrogen that is accumulated within the grain boundaries can lead to a lowering of the critical strain required to fracture the material
+\item Ab Initio Based Understanding of the Segregation and Diffusion Mechanisms of Hydrogen in Steels
+JOM 66, 1399-1405 (2014).
+T. Hickel, R. Nazarov, E.J. McEniry, G. Leyson, B. Grabowski, J. Neugebauer
+
+Info: Vacancy and hydrogen concentrations as a function of temperature and H chemical potential; 
+ the only possible elements that could occupy interstitial positions are B, C, N, O, P, and S. The energies of structures containing these alloying elements in different positions have been calculated. Other than the aforementioned H, none of the interstitial alloying elements resides in TS in ferrite or austenite, but OS or again substitutional sites are preferred.
+ In ferrite, all alloying elements except B repel H in the first shell, whereas a trapping effect is often observed in the second shell. In austenite, several alloying elements trap H in the first shell: There is a weak binding to Cr, Si and W; moderate to Ca, Nb, S, and Ti; strong to Mo; and very strong to O.
+ The migration barrier to escape from the local minimum at the grain boundary to the bulk region is ~1.1 eV, approximately 0.4 eV larger than that of the bulk. An  interesting observation is the fact that if the hydrogen atom can somehow escape the trapping site at the boundary, then it can diffuse rapidly along the grain boundary plane with a low barrier of ~0.1 eV.
+ H interaction with several carbides/nitrides belonging to this space group, such as CrC, MoC, NbC, VC, TiC, and TiN. First, our DFT investigations show that the H solution enthalpy in the considered carbides/nitrides is much higher than in the bulk phases of Fe, hence implying very low H solubility in bulk carbides/ nitrides.
+ The H adsorption energy at the interface between bcc Fe and all considered carbides/nitrides is negative, implying a spontaneous H segregation to such interfaces. In most cases, the preferred H placement is directly at the interface. We find that H prefers to stay bounded to a C atom
+
+Materials:FeMnC, Ni, B, C, N, O, P,S, Carbides, Nitrides
+
+Parameters: review paper, thus few quantitative values, but in principle solution energies of H vs alloying element B, C, N, O, P,S; H content vs microstructure of low alloyed HSS;  H binding energy at vancancies; H solution energies and diffusion barriersat GBs in Fe; H solution energies in Carbides \& Nitrides (bulk \& interfaces)
+
+\item Prediction of enthalpy and entropy of grain boundary segregation
+P. Lejcek and S. Hofmann, Surf. Interface Anal. 2002; 33: 203–210\\
+Material alpha iron + X (X=Al,C)\\
+Info: predicted segreagtion of Al to general bcc GBs.
+
+\item 7.	Hydrogen behaviour at twist {110} grain boundaries in alpha-Fe, 
+Phil. Trans. Roy. Soc. A 375, 20160402 (2017).
+E.J. McEniry, T. Hickel, J. Neugebauer:
+
+Materials: Fe
+
+Info: Uses an environmental tight-binding model for the Fe-H system. Study  of the behaviour of H at a class of low energy {110}-terminated twist GBs in alpha-Fe. For or particular Sigma values the atomic geometry at the interface plane provides extremely favourable trap sites for H, which also possess high escape barriers for diffusion. In contrast, via simulated tensile testing, weakly trapped H at the interface plane of the bulk-like Sigma3 boundary acts as a “glue” for the boundary, increasing both the energetic barrier and elongation to rupture.
+
+\item First-principles study of carbon segregation in bcc iron symmetrical
+tilt grain boundaries
+Jingliang Wang, Rebecca Janisch, Georg K.H. Madsen, Ralf Drautz*
+Acta Materialia 115 (2016) 259-268
+
+Carbon solution energies, GB energies, fracture strength bcc Sigma 5, Sigma 3 ab initio
+
+\item Solubility of carbon in a-iron under volumetric strain and close to the
+R5(310)[001] grain boundary: Comparison of DFT and empirical potential methods
+Elisaveta Hristova, Rebecca Janisch , Ralf Drautz, Alexander Hartmaier
+Computational Materials Science 50 (2011) 1088–1096
+site dependence of carbon excess enthalpy in Sigma 5 on Carbon content and distance from GB
+
+\item Hydrogen embrittlement of a carbon segregated symmetrical tilt grain boundary in alpha-Fe
+A.M.Tahir, R.Janisch, A.Hartmaier
+Materials Science \& EngineeringA 612 (2014) 462–467
+
+Fe C 
+
+work of seperation, hybridisation (DoS), gb energies for varying C and H contents , segregation energy, tensile strength
+
+info 
+We conclude from the immense reduction of the grain boundary energy and the negative segregation energy that in any Fe–C alloy with a sufficient amount of
+interstitial C,the C segregated state should beconsidered as the ground state of the interface.From this point of view,the HEDE mechanism at this grain boundary can be understood. From the overall beneficial contribution of C, 90 percent is due to the chemical contribution while 10 percent is an elastic contribution.The charge density difference shows an accumulation of charge between C and the neighboring Fe atoms,which illustrates the reason for the improved strength properties that can be seen in the DoS, a hybridisation of Fe d-states and C p-states.
+The co-doping study of C and H as impurities shows the HEDE mechanism at this grain boundary is the replacement of a cohesion
+enhancing element by H.We observed a 18 percent  decrease in the work of separation and a 15 percent decrease in the strength value compared to the C-segregated grain boundary.This embrittling effect of H atoms is due to their detrimental mechanical contribution and a decrease of the beneficial chemical contribution of C atoms
+
+\item
+Hydrogen embrittlement controlled by reaction of dislocation with grain boundary in alpha-iron\\
+International Journal of Plasticity
+Available online 31 August 2018
+In Press, Corrected ProofWhat are Corrected Proof\\
+Info:\\
+by atomistic modeling of the tensile response of individual GBs in a bicrystal model of alpha-Fe with different concentrations of H atoms, we have demonstrated that the dislocation-GB reaction by dislocation impingement/emission on the GB plays a key role wherein the hydrogen can degrade the mechanical performance of polycrystalline metals. The dislocation-GB reaction can result in a locally activated state of the GB with a more disordered atomistic structure of the GB, and also introduce a local dilative stress concentration there. For GB segregated with H atoms, the cohesion of the GB will be significantly weakened when it is in the activated state. The GB activation behavior may signify an important GB characteristic that has long been overlooked, and it should have important implications for design of new structural metals with improved resistance to hydrogen embrittlement.
+
+
+\item Understanding and mitigating hydrogen embrittlement
+of steels: a review of experimental, modelling
+and design progress from atomistic to continuum
+O. Barrera, D. Bombac, Y. Chen, T. D. Daff, E. Galindo-Nava, P. Gong, D. Haley,
+R. Horton, I. Katzarov, J. R. Kermode, C. Liverani, M. Stopher, and F. Sweeney
+
+HELP in fcc: possible localised plasticity as hydrogen reduces SFE, thus providing increased dislocation mobility close to stress concentrations, and hydrogen reduces dislocation repulsion, allowing more pile-upagainst GBs and carbides.
+Transition to high strain rates stops mobility of hydrogen in Cottrell clouds around dislocations - possible local ductile brittle transition at dislocation pile-ups?
+
+" HELP is due to reductions
+in the stacking fault energy, reducing susceptibility to
+cross-slip by increasing the equilibrium distance
+between partial dislocations. This increased ductility
+is suggested to cause the localised softening,
+increasing plastic failure susceptibility."
+
+
+\item Effect of hydrogen environment on the separation of Fe grain
+boundaries
+Acta Materialia 107 (2016) 279e288
+Shuai Wang , May L. Martin, Ian M. Robertson, Petros Sofronis 
+
+Fe H 
+
+Hydrogen Dissolution map (EAM MD) for 50 GBs and FS varying chem pots(pressures) - cohesive energies and hydrogen excess fro varying hydrogen 
+atmospheres and temperatures (Sigma 3 Sigma 5)
+
+Info: 
+The reduction of the GB cohesive energy under H chemical potentials representa-tive of the range of charging conditions employed experimentally has been ex-plored using molecular dynamics computer simulations. Under charging conditions for which
+hydrogen-induced intergranular fracture has been observed, the reduction in the GB cohesive energy due to hydrogen is 37 percent. Coupling the results of this calcula-tion with experimental observations of the observed microstructural state beneath intergranular facets leads to the posit that hydrogen-enhanced localized plasticity
+effects on slip transfer across grain boundaries establishes the conditions for grain boundary failure by decohesion. The posited mechanism explains the observed plasticity, provides a mechanism to enhance the concentration of hydrogen on the grain boundary that is dependent on plasticity processes, increases the disorder on
+the grain boundary, and changes the local stress imposed on the grain boundary. The ultimate failure of the grain boundary is attributed to decohesion which is caused by contributions from changes in the structure and composition of the grain boundary
+that are driven by the hydrogen-enhanced plasticity.
+(in agreement with exp I)
+
+
+\item Diffusion of hydrogen within idealised grains of bcc-Fe: A kinetic Monte Carlo study
+Yaojun A. Du, Jutta Rogal, and Ralf Drautz
+arXiv:1206.2314v1 [cond-mat.mtrl-sci] 11 Jun 2012
+
+bcc Fe
+
+Diffusion coefficients vs Hydrogen concentration and temperature in 
+-bulk
+-bulk with point defects 
+-gbs (Sigma 5)
+ (approximative description)
+
+info: 
+1)The defect regions exhibit interstitial sites with a signicantly lower solution energy for
+H atoms, eectively acting as trapping sites. Within an idealised cubic grain structure we observe a characteristic behaviour of the diusion tensor as a function of hydro-
+gen concentration. At low concentrations H is conned to the interface region and the diffusivity is low as compared to diffusion in perfect bcc-Fe bulk. As the number
+of H atoms approaches the number of interface sites the diffusion constant drops due to blocking of available interstitial sites. At large H concentrations bulk diffusion
+dominates the behaviour and a signicant increase of the diffusivity is observed.
+2) Within a layered arrangement of grain boundary planes the diffusion is anisotropic. Parallel to the interface diffusion is similar to the one observed within the grain structure. Perpendicular to the interface diffusion is much slower and can effectively be described by a 1D model of H atoms hopping between neighbouring inter-
+face planes.
+
+\item
+\item
+\item Impact of Mn on the solution enthalpy of hydrogen in austenitic Fe-Mn alloys: A first-principles study,
+J. Comp. Chem. 35, 2239–2244 (2014).
+J. von Appen, R. Dronskowski, A. Chakrabarty, T. Hickel, R. Spatschek, J. Neugebauer\\
+Materials: FeMn\\
+Parameters: H solution enthalpies in FeMn \\
+Info: H prefers a Mn-rich environment
+
+\item Scale bridging description of coherent phase equilibria in the presence of surfaces and interfaces
+R. Spatschek, G. Gobbi, C. Hüter, A. Chakrabarty, U. Aydin, S. Brinckmann, and J. Neugebauer
+Phys. Rev. B 94, 134106\\
+Materials: Ni, Fe, Nb and H \\
+Parameters: Influence of varying elastic relaxation depending on hydride phase shape and geometrical parameters of the system on the hydrogen solulibility \\
+Info: Modification of hydrogen solulibility by up to 2 orders of magnitude due to altered elastic relaxation at free or rigidly fixed surfaces
+
+\item Intergranular Decohesion inuced by mobile hydrogen in iron with and without segregated carbon: first-principles calculations, M. Yamaguchi, J. Kameda\\
+Material alpha fe + C \\
+Suppression of hydrogen induced reduction of cehisive GB energy due to carbon 
+\item Critical assessment of
+hydrogen effects on the slip
+transmission across grain
+boundaries in alpha-Fe, I. Adlakha and K. N. Solanki
+Info:\\
+the effect of hydrogen on the interactions between a screw dislocation and <111> tilt GBs in $\alpha$-Fe were examined. Our simulations reveal that the outcome of the DGB interaction strongly depends on the underlying GB dislocation network. Further, there exists a strong correlation between the GB energy and the energy barrier for slip transmission. In other words, GBs with lower interfacial energy demonstrate a higher barrier for slip transmission. The introduction of hydrogen along the GB causes the energy barrier for slip transmission to increase consistently for all of the GBs examined. The energy balance for a crack initiation in the presence of hydrogen was examined with the help of our observations and previous findings. It was found that the presence of hydrogen increases the strain energy stored within the GB which could lead to a transgranular-to-intergranular fracture mode transition.
+
+\item Hydrogen embrittlement controlled by reaction of dislocation with grain boundary in alpha-iron\\
+Liang Wan. Wen Tong Geng, Akio Ishii, Jun-Ping Du, Nobuyuki Ishikawa, Hajime Kimizuka, Shigenobu Ogata\\
+preprint\\
+by atomistic modeling of the tensile response of individual GBs in a bicrystal model of $\alpha$-Fe with different concentrations of H atoms, we have demonstrated that the dislocation-GB reaction by dislocation impingement/emission on the GB plays a key role wherein the hydrogen can degrade the mechanical performance of polycrystalline metals. The dislocation-GB reaction can result in a locally activated state of the GB with a more disordered atomistic structure of the GB, and also introduce a local dilative stress concentration there. For GB segregated with H atoms, the cohesion of the GB will be significantly weakened when it is in the activated state. The GB activation behavior may signify an important GB characteristic that has long been overlooked, and it should have important implications for design of new structural metals with improved resistance to hydrogen embrittlement
+
+\item Hydrogen embrittlement I. Analysis of hydrogen-enhanced localized plasticity: Effect of hydrogen on the velocity of screw dislocations in alpha -Fe Ivaylo H. Katzarov, Dimitar L. Pashov, and Anthony T. Paxton
+Phys. Rev. Materials 1, 033602 – Published 8 August 2017\\
+Info:\\
+(1) At low stress and low hydrogen content, the mobility of screw dislocations increases with bulk hydrogen concen- tration as a result of (i) increased kink-pair nucleation rate, (ii) low hydrogen trapping effect, and (iii) low probability for the formation of pinning points. With further increase in hydrogen content dislocation mobility decreases due to enhanced trapping effects and pinning by the formation of jogs and superjogs.
+(2) At high stress and high temperature, the hydrogen trapping effect becomes less effective, and enhanced pinning and reduction of dislocation mobility occurs mainly due to the increased probability for nucleation of kink pairs both in the primary and cross slip planes.
+(3) At high hydrogen concentration, the hydrogen trapping effect and pinning lead to a reduction of the dislocation velocity to below the speed of dislocations in pure iron at the same stress and temperature. This is the regime of hydrogen hardening [18].
+(4) The interplay between kink-pair nucleation rate and the kink migration velocity at an applied resolved shear stress of 100 MPa leads to propagation of only one kink pair along the entire dislocation line. Therefore the motion of screw dislocations at this stress is not impeded by formation of jogs and debris and the kMC model predicts the highest increase in dislocation velocity induced by hydrogen in alpha-Fe.
+(5) The effect of hydrogen on increasing dislocation velocity is strongest at low temperature and low hydrogen concentration.
+(6) The range of hydrogen concentration within which dislocation velocity increases most significantly widens with increasing temperature.
+(7) At room temperature, localized softening and thereby possible initiation of shear localisation could be expected under an applied stress close to 100 MPa and relatively low hydrogen content (viz. 1–10 appm).
+(8) Screw dislocations can generate jogs and debris (prismatic loops) during their movement as a result of the collision and recombination of kinks. Both jogs and prismatic loops consist of edge dipoles, which are potential sources for multiplication and generation of new dislocations. The hydrogen trapped in the jogs and debris screens the elastic attraction between the edge dipoles. Hence an increase in the hydrogen concentration can reduce the barrier for activation of dislocation sources created as a result of screw dislocation movement. Furthermore, it is expected that by the defactant effect, vacancies created by the climb of jobs and by the expansion of prismatic loops will be stabilized by absorbing hydrogen thus enabling these processes at lower stress and temperature than in pure iron. 
+
+\item PHYSICAL REVIEW MATERIALS 1, 033603 (2017)
+Hydrogen embrittlement II. Analysis of hydrogen-enhanced decohesion across (111) planes in alpha-Fe
+Ivaylo H. Katzarov1,2 and Anthony T. Paxton1\\
+Info:\\
+Our principal conclusion is that the cohesive strength of alpha-Fe across (111) planes is reduced from 33 GPa (Fig. 6) to 22 GPa due to the presence of dissolved hydrogen in an otherwise perfect crystal. This value is unaffected by a change in temperature from 300 to 200 K, and is is independent of the bulk hydrogen concentration in the range CH = 0.1–10 appm.
+
+\item
+\item
+\item
+\item
+\item
+\item
+\item
+\item
+\item
+\item
+\item
+\item
+\item
+\item
+\item
+\end{itemize}
+
+\se{Work in non-steel systems which consider hydrogen embrittlement in a way important to the influence of Al on HE in manganese steels}
+\begin{itemize}
+\item 3.	Hydrogen-enhanced local plasticity at dilute bulk H concentrations: The role of H–H interactions and the formation of local hydrides 
+Acta Materialia 59, 2969–2980 (2011)  
+J. von Pezold, L. Lymperakis, J. Neugebeauer
+
+Materials:  Ni
+
+Parameters: H distribution vs H interaction energy, (H distribution ,SFEs, shear modulus,partial splitting distance) vs H concentration
+
+Info: local hydrides can be formed and are thermodynamically stable in the tensile strain field of dislocations even in the presence of extremely dilute bulk H distributions The formation of this local hydride phase along the dislocation core gives rise to a strong, short-range shielding of the shear stress along the glide plane of the dislocation, which can be correlated to the nucleation of micro-cracks at the tip of dislocation pile-ups
+
+
+\item Predictive Model of Hydrogen Trapping and Bubbling in Nanovoids in BCC Metals\\
+arxiv \\
+Jie Hou1,2,3, Xiang-Shan Kong, Xuebang Wu1, Jun Song3, C. S. Liu\\
+Info:\\
+Energy levels for H trapping n tungsten nanovoids\\
+Transition from H trapping in nanovoids to h2 molecule formation, growth of nanovoids by dislocation punching
+
+\item
+\item
+\item
+\item
+\item
+\item
+\item
+\item
+\item
+\item
+\end{itemize}
+
+\bibliographystyle{plain}
+\bibliography{bibliographyHEreviewAl}
+
+\end{document}  
